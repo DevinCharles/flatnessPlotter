@@ -1,5 +1,5 @@
 function varargout = flatnessPlotter(varargin)
-% FlATNESSPLOTTER MATLAB code for flatnessPlotter.fig
+% FLATNESSPLOTTER MATLAB code for flatnessPlotter.fig
 %      FLATNESSPLOTTER, by itself, creates a new FLATNESSPLOTTER or raises the existing
 %      singleton*.
 %
@@ -41,7 +41,7 @@ function varargout = flatnessPlotter(varargin)
 
 % Edit the above text to modify the response to help flatnessPlotter
 
-% Last Modified by GUIDE v2.5 12-Jun-2014 12:19:38
+% Last Modified by GUIDE v2.5 25-Nov-2015 00:41:05
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -496,7 +496,7 @@ function pushbutton_clear_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 close(gcbf)
 clear
-Flatness_Plotter()
+flatnessPlotter()
 return
 
 
