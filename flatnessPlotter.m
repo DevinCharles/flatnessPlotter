@@ -1,19 +1,19 @@
-function varargout = Flatness_Plotter(varargin)
-% FlATNESS_PLOTTER MATLAB code for Surface_Plotter.fig
-%      SURFACE_PLOTTER, by itself, creates a new SURFACE_PLOTTER or raises the existing
+function varargout = flatnessPlotter(varargin)
+% FlATNESSPLOTTER MATLAB code for flatnessPlotter.fig
+%      FLATNESSPLOTTER, by itself, creates a new FLATNESSPLOTTER or raises the existing
 %      singleton*.
 %
-%      H = SURFACE_PLOTTER returns the handle to a new SURFACE_PLOTTER or the handle to
+%      H = FLATNESSPLOTTER returns the handle to a new FLATNESSPLOTTER or the handle to
 %      the existing singleton*.
 %
-%      SURFACE_PLOTTER('CALLBACK',hObject,eventData,handles,...) calls the local
-%      function named CALLBACK in SURFACE_PLOTTER.M with the given input arguments.
+%      FLATNESSPLOTTER('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in FLATNESSPLOTTER.M with the given input arguments.
 %
-%      SURFACE_PLOTTER('Property','Value',...) creates a new SURFACE_PLOTTER or raises the
+%      FLATNESSPLOTTER('Property','Value',...) creates a new FLATNESSPLOTTER or raises the
 %      existing singleton*.  Starting from the left, property value pairs are
-%      applied to the GUI before Surface_Plotter_OpeningFcn gets called.  An
+%      applied to the GUI before flatnessPlotter_OpeningFcn gets called.  An
 %      unrecognized property name or invalid value makes property application
-%      stop.  All inputs are passed to Surface_Plotter_OpeningFcn via varargin.
+%      stop.  All inputs are passed to flatnessPlotter_OpeningFcn via varargin.
 %
 %      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
 %      instance to run (singleton)".
@@ -39,7 +39,7 @@ function varargout = Flatness_Plotter(varargin)
 %     Devin C Prescott
 %     devin.c.prescott@gmail.com
 
-% Edit the above text to modify the response to help Surface_Plotter
+% Edit the above text to modify the response to help flatnessPlotter
 
 % Last Modified by GUIDE v2.5 12-Jun-2014 12:19:38
 
@@ -47,8 +47,8 @@ function varargout = Flatness_Plotter(varargin)
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @Surface_Plotter_OpeningFcn, ...
-                   'gui_OutputFcn',  @Surface_Plotter_OutputFcn, ...
+                   'gui_OpeningFcn', @flatnessPlotter_OpeningFcn, ...
+                   'gui_OutputFcn',  @flatnessPlotter_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -63,28 +63,28 @@ end
 % End initialization code - DO NOT EDIT
 
 
-% --- Executes just before Surface_Plotter is made visible.
-function Surface_Plotter_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before flatnessPlotter is made visible.
+function flatnessPlotter_OpeningFcn(hObject, eventdata, handles, varargin)
 % This function has no output args, see OutputFcn.
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to Surface_Plotter (see VARARGIN)
+% varargin   command line arguments to flatnessPlotter (see VARARGIN)
 
-% Choose default command line output for Surface_Plotter
+% Choose default command line output for flatnessPlotter
 handles.output = hObject;
 
 % Update handles structure
 guidata(hObject, handles);
 handles.drawables = {};
 handles.KeepFigs = findall(0,'type','figure');
-% UIWAIT makes Surface_Plotter wait for user response (see UIRESUME)
+% UIWAIT makes flatnessPlotter wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
 guidata(hObject, handles);
 
 
 % --- Outputs from this function are returned to the command line.
-function varargout = Surface_Plotter_OutputFcn(hObject, eventdata, handles) 
+function varargout = flatnessPlotter_OutputFcn(hObject, eventdata, handles) 
 % varargout  cell array for returning output args (see VARARGOUT);
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
